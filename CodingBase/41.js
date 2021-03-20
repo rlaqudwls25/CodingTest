@@ -16,4 +16,3 @@ const primeFunc = (n) => {
   };
   
   primeFunc(11);
-  
