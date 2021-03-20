@@ -6,17 +6,16 @@
 
 // 제한 조건
 // 2020년은 윤년입니다.
-// 2020년 a월 b일은 실제로 있는 날입니다. 
+// 2020년 a월 b일은 실제로 있는 날입니다.
 // 13월 26일이나 2월 45일 같은 날짜는 주어지지 않습니다.
-
 
 const day = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 const month = "5";
 const date = "5";
 
-const solution = (a , b) => {
-const theDay = new Date(`2020-${a}-${b}`);
-console.log(day[theDay.getDate()]);
-}
+const solution = (a, b) => {
+  const theDay = new Date(`2020-${a}-${b}`);
+  console.log(day[theDay.getDate()]);
+};
 
 solution(month, date);
