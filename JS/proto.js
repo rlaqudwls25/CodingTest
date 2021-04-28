@@ -10,4 +10,5 @@ Person.prototype.getName = function () {
 const bj = new Person("Suzi");
 bj.__proto__.getName();
 
-Person.prototype === bj.__proto__;
+// instance의 __proto__가 Constructor의 prototype 프로퍼티를 참조
+Person.prototype === bj.__proto__; // true
