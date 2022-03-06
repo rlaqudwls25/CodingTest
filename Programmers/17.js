@@ -10,7 +10,7 @@
 
 function solution(a, b, c) {
   let max;
-  const answer = a + b;
+  let result;
 
   if (a < b) {
     max = b;
@@ -22,15 +22,14 @@ function solution(a, b, c) {
     max = c;
   }
 
-  if (answer < c) {
-    max = "No";
+  if (a + b + c - max <= max) {
+    result = "No";
   } else {
-    max = "Yes";
+    result = "Yes";
   }
 
-  return max;
+  return result;
 }
 
-solution(13, 11, 37);
-solution(6, 7, 11);
-solution(1, 3, 8);
+solution(1, 10, 2);
+solution(2, 2, 4);
