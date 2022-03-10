@@ -10,6 +10,7 @@
 // student beautiful good
 // ▣ 출력예제 1 beautiful
 
+// 이 문제는 복습이 필요하다.
 function solution(result) {
   let max = 1;
   let answer;
