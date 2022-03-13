@@ -21,9 +21,8 @@ function solution(str) {
     }
   }
 
-  //   answer = str.filter((item, idx) => idx === str.indexOf(item))
-
   return answer;
+  //   return answer.filter((item, idx) => idx === answer.indexOf(item))
 }
 
 arr = ["good", "time", "good", "time", "student"];
