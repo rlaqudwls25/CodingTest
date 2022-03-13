@@ -21,6 +21,8 @@ function solution(str) {
     }
   }
 
+  //   answer = str.filter((item, idx) => idx === str.indexOf(item))
+
   return answer;
 }
 
