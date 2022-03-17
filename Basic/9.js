@@ -9,18 +9,18 @@
 // ▣ 출력예제 1 5
 
 function solution(num) {
-  let answer = [];
   let count = 1;
+  let max = num[0];
 
   for (let i = 1; i < num.length; i++) {
-    if (num[i] < num[i + 1]) {
-      answer.push(num[i + 1]);
+    if (num[i] > max) {
       count += 1;
+      max = num[i];
     }
   }
 
   return count;
 }
 
-num = [130, 135, 148, 140, 145, 150, 150, 153];
+num = [140, 135, 139, 140, 150, 151, 152, 153];
 solution(num);
