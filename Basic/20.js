@@ -8,10 +8,6 @@ function solution(arr) {
     while (temp) {
       sum += temp % 10;
       temp = Math.floor(temp / 10);
-
-      // if(temp === 0) { 0은 false 여서 이 부분이 필요 없다.
-      //   break;
-      // }
     }
     if (max < sum) {
       max = sum;
@@ -30,3 +26,7 @@ function solution(arr) {
 arr = [128, 460, 603, 40, 521, 137, 123];
 
 solution(arr);
+
+// while문을
+
+// let sum = x.toString().split('').reduce((a,b) => a + Number(b), 0) 코드 한줄로 대체가 가능하다.
