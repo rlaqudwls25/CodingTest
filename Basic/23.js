@@ -1,20 +1,22 @@
 function solution(arr, m) {
-  let count = 0; // 사줄 수 잇는 학생 수
-  let sum = 0; // 상품의 가격 + 배송비 합
-
-  const z = arr[0].length;
   const x = arr.length;
+  const sArr = arr.sort((a, b) => a[0] - b[0]);
+  let answer = 0;
 
   for (let i = 0; i < x; i++) {
-    for (let j = 0; j < z; j++) {
-      if (sum < 28) {
-        sum += arr[i][j];
-      }
-      count++;
-    }
-  }
+    let money = m - (sArr[i][0] / 2 + sArr[i][1]); // 각 상품의 가격을 할인
+    let count = 1;
 
-  return count;
+    for (let j = 0; j < x; j++) {
+      if (i !== j && sArr[j][0] + sArr[j][1] <= money) {
+        money -= sArr[j][0] + sArr[j][1];
+        count++;
+      }
+    }
+
+    answer = Math.max(count);
+  }
+  return answer;
 }
 
 arr = [
@@ -25,6 +27,4 @@ arr = [
   [10, 3],
 ];
 
-money = 28;
-
-solution(arr, money);
+solution(arr, 28);
