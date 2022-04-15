@@ -1,3 +1,4 @@
+// 첫번째 풀이
 function solution(s) {
   let result = "Yes";
   const string = s.split("");
@@ -16,6 +17,23 @@ function solution(s) {
 
   return result;
 }
+
+// 두번째 풀이  Stack 개념 사용
+// function solution(s) {
+//   let answer = "Yes";
+//   const stack = [];
+
+//   for (let x of s) {
+//     if (x === "(") {
+//       stack.push(x);
+//     } else {
+//       if (stack.length === 0) return "No";
+//       stack.pop();
+//     }
+//   }
+
+//   return answer;
+// }
 
 solution("(()(()))(()");
 solution("(())");
