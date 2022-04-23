@@ -9,7 +9,7 @@ function solution(s) {
     }
   }
 
-  return answer;
+  return answer.join("");
 }
 
 solution("(A(BC)D)EF(G(H)(IJ)K)LM(N)");
