@@ -14,6 +14,7 @@ function solution(board, moves) {
         } else {
           stack.push(temp);
         }
+        break; //인형뽑기의 position이 바뀌지않고 계속 뽑는거 방지예
       }
     }
   });
