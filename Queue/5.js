@@ -8,19 +8,15 @@
 
 function solution(s) {
   let answer = true;
-  let result = s.split("");
   let stack = [];
 
   for (let i = 0; i < s.length; i++) {
-    if (s[0] === ")") {
-      answer = false;
-    }
-
     if (s[i] === "(") {
       stack.push(s[i]);
-    }
-
-    if (s[i] === ")") {
+    } else {
+      if (stack.length === 0) {
+        answer = false;
+      }
       stack.pop();
     }
   }
