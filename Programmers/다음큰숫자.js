@@ -34,3 +34,33 @@ function solution(n) {
 }
 
 solution(78);
+
+//두 번쨰 풀이
+function solution(n) {
+  const countOne = (str) => {
+    return str
+      .split("")
+      .reduce((sum, current) => (current === "1" ? (sum += 1) : sum), 0);
+  };
+
+  let result = n;
+  let find = false;
+  let plusCount = 1;
+  let answer = 0;
+
+  while (!find) {
+    if (
+      countOne(result.toString(2)) ===
+      countOne((result + plusCount).toString(2))
+    ) {
+      find = true;
+      answer = result + plusCount;
+    } else {
+      plusCount++;
+    }
+  }
+
+  return answer;
+}
+
+solution(78);
